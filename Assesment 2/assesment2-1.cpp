@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-int choise,q,a = 0,e = 0;
-string mp;
+int choise,q,a = 0,e = 0,i=0,j;
+string mp,arr[100];
 char option;    
 class Techfood
 {
@@ -46,12 +46,18 @@ int main()
         switch(choise)
         {
             case 1 :
+                arr[i] = "Margrita pizza";
+                i++;
                 t.food(100);
             break;
             case 2 :
+                arr[i] = "Onion pizza";
+                i++;
                 t.food(130);
             break;
             case 3 :
+                arr[i] = "Farm house pizza";
+                i++;
                 t.food(250);
             break;
         }
@@ -65,12 +71,18 @@ int main()
         switch(choise)
         {
             case 1 :
+            arr[i] = "Veg. Burger";
+            i++;
             t.food(80);
             break;
             case 2 :
+            arr[i] = "Chees Burger";
+                i++;
             t.food(120);
             break;
             case 3 :
+            arr[i] = "Chiken Burgr";
+            i++;
             t.food(150);
             break;
         }
@@ -84,12 +96,18 @@ int main()
         switch(choise)
         {
             case 1 :
+            arr[i] = "Club Sandwitch";
+            i++;
             t.food(240);
             break;
             case 2 :
+            arr[i] = "Veg. Crispy Sandwitch";
+            i++;
             t.food(160);
             break;
             case 3 :
+            arr[i] = "Extream Veg Sandwitch";
+            i++;
             t.food(100);
             break;
         }
@@ -103,12 +121,18 @@ int main()
         switch(choise)
         {
             case 1 :
+            arr[i] = "Chiken Rolls";
+            i++;
             t.food(150);
             break;
             case 2 :
+            arr[i] = "Paneer Rolls";
+            i++;
             t.food(120);
             break;
             case 3 :
+            arr[i] = "Veg. Rolls";
+            i++;
             t.food(80);
             break;
         }
@@ -122,12 +146,18 @@ int main()
         switch(choise)
         {
             case 1 :
+            arr[i] = "Veg. Biryani";
+            i++;
             t.food(240);
             break;
             case 2 :
+            arr[i] = "Chiken Biryani";
+            i++;
             t.food(350);
             break;
             case 3 :
+            arr[i] = "Haidrabadi Biryani";
+            i++;
             t.food(400);
             break;
         }
@@ -150,8 +180,15 @@ int main()
         
     down :
     cout<<"\n                                  --------- Your order ---------                                   \n";
+
+    cout<<"Your order list"<<endl;
+    cout<<"\n";
+    for(j=0;j<i;j++)
+    {
+        cout<<arr[j]<<endl;
+    }
     cout<<"\n Your Total bill : "<<e<<"/-"<<endl;
-    cout<<"Your Order will be at your door in 30 min"<<endl;
+    cout<<"\nYour Order will be at your door in 30 min"<<endl;
     cout<<"Thank you for ordering from tops tech fast food";
     return 0;
 }
